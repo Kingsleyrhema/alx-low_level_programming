@@ -1,4 +1,3 @@
-#!/bin/bash
 -Wall gcc
 #include<stdio.h>
 int main(void)
