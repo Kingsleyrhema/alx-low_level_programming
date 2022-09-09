@@ -1,4 +1,5 @@
 #!/bin/bash
+gcc -c 5-printf.c
 #include<stdio.h>
 int main(void)
 {
