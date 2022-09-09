@@ -2,7 +2,7 @@
 /**
  * main - main block
  *
- * Return: text in puts
+ * Return: 0
  */
 int main(void)
 {
