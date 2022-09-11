@@ -1,15 +1,19 @@
 #include <stdio.h>
+
 /**
- * main - main block
- * Return: always 0
+ * main - Prints the alphabet.
+ *
+ * Return: Always 0 (Success)
  */
 int main(void)
 {
-    int i;
-    for (i=97; i<=122; i++)
-    {
-        putchar(i);
-    }
-    putchar('\n');
-    return (0);
+	char pa[26] = "abcdefghijklmnopqrstuvwxyz";
+	int i;
+
+	for (i = 0; i < 26; i++)
+	{
+		putchar(pa[i]);
+	}
+	putchar('\n');
+	return (0);
 }
