@@ -1,22 +1,20 @@
 #include <stdio.h>
 
 /**
- * mian - main block
- *
- * Return: always return 0
- */
-
+   * main - print alphabet in upper and lower
+   *
+   * Return: zero
+   */
 int main(void)
-
 {
-	int i;
-	int I;
-	for (i = 97; i < 122; i++)
+	char ch;
+	char CH;
 
-		putchar(i);
-	for (I = 65; i < 91; i++)
-
-		putchar(I);
+	for (ch = 'a'; ch <= 'z'; ch++)
+		putchar(ch);
+	for (CH = 'A'; CH <= 'Z'; CH++)
+		putchar(CH);
 	putchar('\n');
 	return (0);
 }
+
