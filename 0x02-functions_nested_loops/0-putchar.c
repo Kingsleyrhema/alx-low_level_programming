@@ -1,23 +1,19 @@
 #include "main.h"
-
+#include <unistd.h>
 /**
- * main - prints the word _putchar
- *
- * Return: 0 on success execution.
- */
-
+* main - Print word
+*
+* Return: Always 0 (success)
+*/
 int main(void)
 {
-	char s[] = "_putchar";
+	char word[8] = "_putchar";
 	int i = 0;
 
-	while (s[i] != '\0')
+	for (i = 0; i < 8; i++)
 	{
-		_putchar(s[i]);
-		i++;
+		_putchar(word[i]);
 	}
-	_putchar(10);
-
+	_putchar('\n');
 	return (0);
 }
-
