@@ -1,1 +1,1 @@
-task 0 prototype
+int_putchar(char c);
