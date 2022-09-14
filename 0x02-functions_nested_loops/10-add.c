@@ -1,54 +1,14 @@
- #include "main.h"
-
+#include "main.h"
 /**
- * add - adds two integers
- * @a: first integer
- * @b: second integer
- * Return: sum
+ * add - Adds two integers and returns
+ * the results
  *
+ * @a: number one.
+ * @b: number two.
+ *
+ * Return: Add of number one and number two.
  */
 int add(int a, int b)
 {
-	int sum = a + b;
-
-	return (sum);
-}
-
-11. #include "main.h"
-#include <stdio.h>
-
-/**
- * print_to_98 - prints all the integers between the number given and 98
- * @n: number to count from
- *
- * Return: void
- */
-
-void print_to_98(int n)
-{
-	if (n > 98)
-	{
-		while (n >= 98)
-		{
-			printf("%d", n);
-			if (n != 98)
-			{
-				printf(", ");
-			}
-			n--;
-		}
-	}
-	else
-	{
-		while (n <= 98)
-		{
-			printf("%d", n);
-			if (n != 98)
-			{
-				printf(", ");
-			}
-			n++;
-		}
-	}
-	printf("\n");
+	return (a + b);
 }
