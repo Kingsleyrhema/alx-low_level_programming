@@ -1,34 +1,46 @@
-#include <stdio.h>
-#include <math.h>
+#include "main.h"
 
 /**
- * main - prints the largest prime factorial of 612852475143
- * Return: 0
+ * _atoi - converts the first set of digits in a string to an integer,
+ * taking into account the sign of the number
+ * @s: string to be converted
+ * Return: int containing the converted number
  */
 
-int main(void)
+int _atoi(char *s)
 
 {
-	long int max = -1, n = 612852475143;
-	int i = 3;
+	int index, ind2;
+	unsigned int res;
+	int sign = 1;
 
-	while (n % 2 == 0)
+	char now;
+
+
+	index = 0;
+
+	res = 0;
+
+	while (*(s + index) != '\0')
 	{
-		max = 2;
-		n /= 2;
-	}
-	while (i <= sqrt(n))
-	{
-		while (n % i == 0)
+		now = *(s + index);
+		if (now == '-')
 		{
-			max = i;
-			n = n / i;
+			sign *= -1;
 		}
-		i += 2;
+		if (now >= '0' && now <= '9')
+		{
+			ind2 = index;
+			while (*(s + ind2) > 47 && *(s + ind2) < 58)
+			{
+				res = (res * 10) + *(s + ind2) - '0';
+				ind2++;
+			}
+			break;
+		}
+		index++;
 	}
-	if (n > 2)
-		max = n;
-	printf("%ld\n", max);
-	return (0);
-
+	if (sign < 0)
+		res *= sign;
+	return (res);
 }
